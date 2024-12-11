@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -43,11 +44,26 @@
             border-radius: 5px;
             margin: 5px;
             transition: 0.3s ease;
+            display: inline-block;
         }
 
         nav a:hover {
             background-color: #16a085;
             color: #000;
+        }
+
+        @media screen and (max-width: 768px) {
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            nav a {
+                padding: 8px 12px;
+                font-size: 14px;
+                margin: 5px;
+            }
         }
 
         /* Main content */
@@ -64,8 +80,8 @@
 
         .photo-container img {
             border-radius: 50%;
-            width: 150px;
-            height: 150px;
+            width: 200px;
+            height: 200px;
             border: 4px solid #16a085;
         }
 
@@ -84,10 +100,20 @@
 
         .content ul li {
             background: #e7f6f2;
-            margin: 10px 0;
+            margin: 20px 0; /* Increased margin for spacing */
             padding: 10px 15px;
             border-left: 5px solid #16a085;
             border-radius: 3px;
+        }
+
+        .content ul li a {
+            color: #007BFF; /* Blue color */
+            text-decoration: none; /* No underline */
+            font-size: 1.5em;
+        }
+
+        .content ul li a:hover {
+            color: #0056b3; /* Darker blue on hover */
         }
 
         /* Contact Section */
@@ -157,6 +183,8 @@
             border-radius: 50%;
             cursor: pointer;
             font-size: 1.5em;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000; /* Ensures it's above other elements */
         }
 
         .top-arrow:hover {
@@ -174,6 +202,7 @@
         <a href="#about">About Me</a>
         <a href="#education">Education</a>
         <a href="#skills">Skills</a>
+        <a href="#certifications">Certifications</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
     </nav>
@@ -190,9 +219,9 @@
         <section id="education">
             <h2>Education</h2>
             <ul>
-                <li><strong>BSc Computer Science</strong> - Aditya Degree College, Amalapuram (2022-2025)<br>CGPA: 8.9</li>
-                <li><strong>Intermediate</strong> - Aditya Junior College, Amalapuram (2020-2022)<br>Percentage: 95%</li>
-                <li><strong>SSC</strong> - S.R.K Z.P.P High School, Ponnamanda (2019-2020)<br>Percentage: 91%</li>
+                <li><strong>BSc Computer Science</strong> - Aditya Degree College, Amalapuram (2022-2025)<br><br>CGPA: 8.9</li>
+                <li><strong>Intermediate</strong> - Aditya Junior College, Amalapuram (2020-2022)<br><br>Percentage: 95%</li>
+                <li><strong>SSC</strong> - S.R.K Z.P.P High School, Ponnamanda (2019-2020)<br><br>Percentage: 91%</li>
             </ul>
         </section>
 
@@ -206,14 +235,40 @@
             </ul>
         </section>
 
+        <section id="certifications">
+    <h2>Certifications</h2>
+    <ul>
+        <li style="display: flex; justify-content: space-between; align-items: center;">
+            TCS iON Career Edge – Young Professional
+            <a href="young_professional.pdf" target="_blank" style="color: #007BFF; text-decoration: none; font-size: 1.5em;">&#128065;</a>
+        </li>
+        <li style="display: flex; justify-content: space-between; align-items: center;">
+            Certified in C Programming offered by Cisco
+            <a href="c_programming.pdf" target="_blank" style="color: #007BFF; text-decoration: none; font-size: 1.5em;">&#128065;</a>
+        </li>
+        <li style="display: flex; justify-content: space-between; align-items: center;">
+            Certified in Java Foundations offered by Oracle Academy
+            <a href="java_foundations.pdf" target="_blank" style="color: #007BFF; text-decoration: none; font-size: 1.5em;">&#128065;</a>
+        </li>
+        <li style="display: flex; justify-content: space-between; align-items: center;">
+            Certified in Database Foundations offered by Oracle Academy
+            <a href="database_foundations.pdf" target="_blank" style="color: #007BFF; text-decoration: none; font-size: 1.5em;">&#128065;</a>
+        </li>
+        <li style="display: flex; justify-content: space-between; align-items: center;">
+            Certified in Python for Beginners offered by Infosys
+            <a href="python_beginners.pdf" target="_blank" style="color: #007BFF; text-decoration: none; font-size: 1.5em;">&#128065;</a>
+        </li>
+    </ul>
+</section>
+
+
+
         <section id="projects">
             <h2>Projects</h2>
             <ul>
                 <li>Developed this portfolio website as part of a project showcasing my profile, education, and skills.</li>
             </ul>
         </section>
-
-        
 
         <section id="strengths">
             <h2>Strengths</h2>
@@ -232,38 +287,37 @@
                 <li>Telugu</li>
             </ul>
         </section>
-<section id="contact">
+
+        <section id="contact">
             <h2>Contact Information</h2>
             <div class="contact-icons">
-    <p><a href="mailto:phanivivek005@gmail.com" title="Email">&#9993;</a> phanivivek005@gmail.com</p>
-    <p><a href="tel:+919110375487" title="Phone">&#9742;</a> +91 9110375487</p>
-    <p><a href="https://linkedin.com/in/PhaniVivekKondepudi" title="LinkedIn" target="_blank">&#128279;</a> Phani Vivek Kondepudi</p>
-</div>
+                <p><a href="mailto:phanivivek005@gmail.com" title="Email">&#9993;</a> phanivivek005@gmail.com</p>
+                <p><a href="tel:+919110375487" title="Phone">&#9742;</a> +91 9110375487</p>
+                <p><a href="https://linkedin.com/in/PhaniVivekKondepudi" title="LinkedIn" target="_blank">&#128279;</a> Phani Vivek Kondepudi</p>
+            </div>
 
-<form id="contact-form" action="save_contact.php" method="post" style="max-width: 600px; margin: 20px auto;">
-    <div style="margin-bottom: 15px;">
-        <label for="name" style="display: block; font-weight: bold;">Name:</label>
-        <input type="text" id="name" name="name" required placeholder="Enter your name" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
-    </div>
-    <div style="margin-bottom: 15px;">
-        <label for="email" style="display: block; font-weight: bold;">Email:</label>
-        <input type="email" id="email" name="email" required placeholder="Enter your email" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
-    </div>
-    <div style="margin-bottom: 15px;">
-        <label for="subject" style="display: block; font-weight: bold;">Subject:</label>
-        <input type="text" id="subject" name="subject" required placeholder="Enter subject" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
-    </div>
-    <div style="margin-bottom: 15px;">
-        <label for="message" style="display: block; font-weight: bold;">Message:</label>
-        <textarea id="message" name="message" required placeholder="Enter your message" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; height: 100px;"></textarea>
-    </div>
-    <div style="display: flex; justify-content: space-between;">
-        <button type="reset" style="background-color: #16a085; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Reset</button>
-        <button type="submit" style="background-color: #16a085; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Submit</button>
-    </div>
-</form>
-
-
+            <form id="contact-form" action="save_contact.php" method="post" style="max-width: 600px; margin: 20px auto;">
+                <div style="margin-bottom: 15px;">
+                    <label for="name" style="display: block; font-weight: bold;">Name:</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your name" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <label for="email" style="display: block; font-weight: bold;">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <label for="subject" style="display: block; font-weight: bold;">Subject:</label>
+                    <input type="text" id="subject" name="subject" required placeholder="Enter subject" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <label for="message" style="display: block; font-weight: bold;">Message:</label>
+                    <textarea id="message" name="message" required placeholder="Enter your message" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; height: 100px;"></textarea>
+                </div>
+                <div style="display: flex; justify-content: space-between;">
+                    <button type="reset" style="background-color: #16a085; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Reset</button>
+                    <button type="submit" style="background-color: #16a085; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Submit</button>
+                </div>
+            </form>
 
             <a href="Phani%20Vivek%20Kondepudi.pdf" class="btn" download>Download Resume</a>
         </section>
