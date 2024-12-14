@@ -298,7 +298,7 @@
                 <p><a href="https://linkedin.com/in/PhaniVivekKondepudi" title="LinkedIn" target="_blank">&#128279;</a> Phani Vivek Kondepudi</p>
             </div>
 
-            <form id="contact-form" action="save_contact.php" method="post" style="max-width: 600px; margin: 20px auto;">
+            <form name="submit-to-google-sheet" id="contact-form" action="save_contact.php" method="post" style="max-width: 600px; margin: 20px auto;">
                 <div style="margin-bottom: 15px;">
                     <label for="name" style="display: block; font-weight: bold;">Name:</label>
                     <input type="text" id="name" name="name" required placeholder="Enter your name" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
@@ -335,5 +335,18 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     </script>
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbw3CE1U3GTK2BvKEaYXHWXxqJwbLtM4qTCJS9Y2CnnN-p2SkxhoPxo0g7oHs5au5QkG/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+
 </body>
 </html>
